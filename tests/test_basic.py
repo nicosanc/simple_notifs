@@ -48,7 +48,7 @@ class TestTimeSince(unittest.TestCase):
         self.assertEqual(utc_to_human(dt), "1d")
 
     def test_days_2(self):
-        dt = ar.utcnow()
+        dt = ar.now()
         dt = dt.shift(days = -7)
         self.assertEqual(utc_to_human(dt), "1w")
 
@@ -80,6 +80,16 @@ class TestTimeSince(unittest.TestCase):
         dt = ar.utcnow()
         dt = dt.shift(days = -1200)
         self.assertEqual(utc_to_human(dt), "3y")
+    
+    def arrow_not_utc(self):
+
+        dt = "2023-07-17 21:23:48.418308"
+        self.assertEqual(utc_to_human(dt), "2m")
+    
+    def another_datetime_type(self):
+        dt = datetime.now()
+        dt = dt - timedelta(days=5)
+        self.assertEqual(utc_to_human(dt), "5d")
 
 if __name__ == '__main__':
     unittest.main()

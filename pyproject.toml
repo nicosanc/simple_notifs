@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "simple_notifs"
-version = "0.0.1"
+version = "0.0.3"
 
 authors = [
   { name= "Nico Sanchez", email= "nicosanchez0411@gmail.com"},

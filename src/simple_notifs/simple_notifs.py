@@ -1,11 +1,14 @@
 import arrow as ar
 from datetime import datetime, timezone
 
-def utc_to_human(datetime_object: datetime, is_utc: bool = True, days_and_above: bool = False) -> str:
+def utc_to_human(datetime_object: datetime, days_and_above: bool = False) -> str:
     now = ar.utcnow()
 
-    if not is_utc:
-        datetime_object = datetime(datetime_object, tzinfo=timezone.utc)
+    # check if the object is an arrow object, if not, convert it to arrow. 
+    if not isinstance(datetime_object, ar.Arrow):
+        datetime_object = ar.get(datetime_object)
+
+    datetime_object = datetime_object.to('UTC')
     time_delta = now - datetime_object
 
     seconds = time_delta.total_seconds()
