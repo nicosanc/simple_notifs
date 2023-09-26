@@ -1,7 +1,7 @@
 import arrow as ar
 from datetime import datetime, timezone
 
-def time_difference(datetime_object: datetime, is_utc: bool = True, days_and_above: bool = False) -> str:
+def utc_to_human(datetime_object: datetime, is_utc: bool = True, days_and_above: bool = False) -> str:
     now = ar.utcnow()
 
     if not is_utc:

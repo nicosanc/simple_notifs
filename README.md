@@ -6,7 +6,7 @@ since the notification was made. Instead of "1 hour ago" or "20 minutes ago", th
 "1h" and "20mi", respectively
 
 ## Access
-From simple_notifs.utcToHuman import time_difference
+From simple_notifs.simple_notifs import utc_to_human
 
 ## Arguments
 
