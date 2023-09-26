@@ -1,8 +1,8 @@
 # Introduction
 
 This library was built for making simple, shortened human readable versions of time deltas. 
-This was specifically made for notificationon applications where a user wants to see how long it has been
-since the notification was made. Instead of "1 hour ago" or "20 minutes ago", the resulting time delta would be
+This was specifically made for notifications on applications where a user wants to see how long it has been
+since the notification was made. For example, instead of a time delta such as "1 hour ago" or "20 minutes ago", the resulting time delta would be
 "1h" and "20mi", respectively
 
 ## Access
