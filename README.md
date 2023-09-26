@@ -13,6 +13,5 @@ From simple_notifs.simple_notifs import utc_to_human
 ## Arguments
 
 - Mandatory, a datetime object must be passed as input to the function. 
-- By default, is_utc is set to True. If false, the built in method converts the datetime object to utc, then performs its operation.
 - By default, days_and_above is set to False. If True, the built in method will only display time deltas starting at "1d". This means any deltas
 in seconds, minutes, or hours that are less than a full day, will be truncated to "1d".
